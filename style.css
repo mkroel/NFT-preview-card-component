@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit, sans-serif;
+    line-height: 1.8;
+}
+
+:root {
+    --primaryBlue: hsl(215, 51%, 70%);
+    --primaryCyan: hsl(178, 100%, 50%);
+    --darkBlue: hsl(217, 54%, 11%);
+    --heavyDarkBlue: hsl(216, 50%, 16%);
+    --lineColor: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+h1 {
+    margin: 18px 0 10px;
+
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--darkBlue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    background-color: var(--heavyDarkBlue);
+    border-radius: 24px;
+    box-shadow: 4px 4px 34px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+#nft {
+    display: block;
+    width: 360px;
+    height: auto;
+    border-radius: 12px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1.5;
+    color: var(--primaryBlue);
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.icon {
+    width: 16px;
+    height: auto;
+    margin-right: 6px;
+}
+
+.clock {
+    width: 18px;
+}
+
+#eth,
+#time {
+    display: flex;
+    align-items: center;
+}
+
+#eth span {
+    font-weight: 600;
+    color: var(--primaryCyan);
+}
+
+#time span {
+    font-weight: 400;
+    color: var(--primaryBlue);
+}
+
+hr {
+    border: 1px var(--lineColor) solid;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#user span {
+    color: var(--white);
+}
+
+.avatar {
+    width: 36px;
+    height: auto;
+    margin-right: 20px;
+    border: 1px var(--white) solid;
+    border-radius: 50%;
+}
+
+.image {
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: .5s ease;
+    background-color: var(--primaryCyan);
+}
+
+#overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
+}
+
+#nft:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: var(--primaryCyan);
+    background-image: url(images/icon-view.svg);
+}
+
+#overlay:hover:not(img) {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#overlay:hover img {
+    opacity: 1;
+}
+
+h1:hover,
+#user span:hover {
+    cursor: pointer;
+    color: var(--primaryCyan);
+}
